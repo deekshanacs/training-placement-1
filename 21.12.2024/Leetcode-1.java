@@ -35,53 +35,6 @@ public class Solution {
 
 
 
-Pg-2
 
-
-public class Solution {
-    public boolean isPalindrome(int x) {
-
-        if (x < 0) {
-            return false;
-        }
-
-        String str = Integer.toString(x);
-        int left = 0;
-        int right = str.length() - 1;
-
-        while (left < right) {
-            if (str.charAt(left) != str.charAt(right)) {
-                return false;
-            }
-            left++;
-            right--;
-        }
-
-        return true;
-    }
-}
-
-
-Pg-3
-
-import java.util.HashMap;
-
-public class Solution {
-    public int[] twoSum(int[] nums, int target) {
-
-        HashMap<Integer, Integer> map = new HashMap<>();
-
-        for (int i = 0; i < nums.length; i++) {
-
-            int complement = target - nums[i];
-            if (map.containsKey(complement)) {
-
-                return new int[] { map.get(complement), i };
-            }
-            
-            map.put(nums[i], i);
-        }
-        
-        throw new IllegalArgumentException("No two sum solution");
-    }
-}
+ 
+    
